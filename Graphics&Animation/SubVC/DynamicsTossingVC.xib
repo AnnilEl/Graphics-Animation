@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DynamicsTossingVC" customModule="Graphics_Animation" customModuleProvider="target">
+            <connections>
+                <outlet property="blueSquare" destination="twa-hX-S07" id="uz7-oa-B9Y"/>
+                <outlet property="imgView" destination="gsw-XX-0qv" id="9yS-SV-3ZR"/>
+                <outlet property="redSquare" destination="w2E-cq-cb6" id="oRi-18-sda"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldfish_feature" translatesAutoresizingMaskIntoConstraints="NO" id="gsw-XX-0qv">
+                    <rect key="frame" x="33" y="157" width="254" height="172"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2E-cq-cb6">
+                    <rect key="frame" x="156" y="219" width="8" height="8"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="8" id="WLH-Fc-dLs"/>
+                        <constraint firstAttribute="height" constant="8" id="Wpm-2B-mCL"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twa-hX-S07">
+                    <rect key="frame" x="80" y="420" width="8" height="8"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="tME-E7-Kmd"/>
+                        <constraint firstAttribute="width" constant="8" id="zZl-5Y-fJ7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="w2E-cq-cb6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="219" id="MKx-Fo-W02"/>
+                <constraint firstItem="w2E-cq-cb6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="156" id="MYS-P0-gDm"/>
+                <constraint firstItem="twa-hX-S07" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="hON-5k-4AP"/>
+                <constraint firstItem="twa-hX-S07" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="420" id="z4m-zP-TNA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="2K7-hh-DsW" appends="YES" id="4zg-Cb-xl8"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="2K7-hh-DsW">
+            <connections>
+                <action selector="handleAttachmentGesture:" destination="-1" id="cXq-cU-skZ"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="goldfish_feature" width="300" height="191"/>
+    </resources>
+</document>
