@@ -35,16 +35,17 @@ class DynamicsViewController: UIViewController, UICollisionBehaviorDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+
         animtor = UIDynamicAnimator(referenceView: view)
         gravity = UIGravityBehavior(items: [square])
         animtor.addBehavior(gravity)
-        
         collision = UICollisionBehavior(items: [square])
         collision.addBoundary(withIdentifier: "barrier" as NSCopying, for: UIBezierPath(rect: barrier.frame))
         collision.translatesReferenceBoundsIntoBoundary = true
         animtor.addBehavior(collision)
         collision.collisionDelegate = self
+        
+
 
 /**
 
@@ -89,9 +90,7 @@ class DynamicsViewController: UIViewController, UICollisionBehaviorDelegate {
                 self.view.addSubview(outLine)
             }
             updateCount += 1
-            
         }
-        
     }
     func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?, at p: CGPoint) {
         print("Boundary contact occurred - \(String(describing: identifier))")
@@ -101,17 +100,17 @@ class DynamicsViewController: UIViewController, UICollisionBehaviorDelegate {
             collidingView.backgroundColor = .gray
         }
         
-//        if !firstContact {
-//            firstContact = true
-//
-//            let square = UIView(frame: CGRect(x: 30, y: 0, width: 100, height: 100))
-//            square.backgroundColor = .gray
-//            view.addSubview(square)
-//            collision.addItem(square)
-//            gravity.addItem(square)
-//            let attach = UIAttachmentBehavior(item: collidingView, attachedTo: square)
-//            animtor.addBehavior(attach)
-//        }
+        if !firstContact {
+            firstContact = true
+
+            let square = UIView(frame: CGRect(x: 30, y: 0, width: 100, height: 100))
+            square.backgroundColor = .gray
+            view.addSubview(square)
+            collision.addItem(square)
+            gravity.addItem(square)
+            let attach = UIAttachmentBehavior(item: collidingView, attachedTo: square)
+            animtor.addBehavior(attach)
+        }
     }
 
     override func didReceiveMemoryWarning() {

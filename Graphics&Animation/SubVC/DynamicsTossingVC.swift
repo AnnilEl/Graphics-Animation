@@ -48,18 +48,14 @@ class DynamicsTossingVC: UIViewController {
         case .ended:
             print("Touch end position is \(location)")
             print("End location in image is \(boxLocation)")
-//            resetDemo()
+
             animator.removeAllBehaviors()
-            // 获取手势的拖动速度。
-            // 计算速度的大小 - 这是由x方向速度和y方向速度形成的三角形的斜边。
-            
-            // 要理解这个背后的理论，请查看这个Trigonometry for Game Programming教程。
+            // 1
             let velocity = sender.velocity(in: view)
             let magnitude = sqrt(velocity.x * velocity.x + velocity.y * velocity.y)
             
             if magnitude > ThrowingThreshold {
-                // 假设手势速度超过为动作设置的最小阈值，则设置push行为。
-                // 所需的方向由x和y速度组成，并转换为一个给定方向部分的向量。 一旦设置了推送行为，就将其添加到动画序列中。
+                // 2
                 let pushBehavior = UIPushBehavior(items: [imgView], mode: .instantaneous)
                 pushBehavior.pushDirection = CGVector(dx: velocity.x / 10, dy: velocity.y / 10)
                 pushBehavior.magnitude = magnitude / ThrowingVelocityPadding
@@ -67,10 +63,7 @@ class DynamicsTossingVC: UIViewController {
                 self.pushBehavior = pushBehavior
                 animator.addBehavior(pushBehavior)
                 
-                // 本部分设置了一些旋转以使图像“飞走”。 在这里阅读复杂的计算。
-                // 其中一些取决于手指在启动手势时距离手指边缘的距离。
-                
-                // 调整这块的value，观察运动如何改变效果。
+                // 3
                 let angle = Int(arc4random_uniform(20)) - 10
                 
                 itemBehavior = UIDynamicItemBehavior(items: [imgView])
@@ -79,7 +72,7 @@ class DynamicsTossingVC: UIViewController {
                 itemBehavior.addAngularVelocity(CGFloat(angle), for: imgView)
                 animator.addBehavior(itemBehavior)
                 
-                // 在指定的时间间隔之后，动画通过将图像发送回目的地进行重置，所以它会缩回并返回到屏幕 - 就像球从墙上弹起一样
+                // 4
                 let timeOffset = Int(0.4 * Double(NSEC_PER_SEC))
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime
                     .now() + DispatchTimeInterval.seconds(timeOffset)) {

@@ -11,7 +11,7 @@ import UIKit
 class MainTableViewController: UITableViewController {
 
     
-    let examples: [String] = [ "UIKitDynamics","CoreImage","DynamicsTossing"]
+    let examples: [String] = [ "UIKitDynamics","CoreImage","DynamicsTossing", "UIAppearanceTutorial_Simple"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +50,10 @@ class MainTableViewController: UITableViewController {
        
         case 2:
             nextVC = DynamicsTossingVC()
+        case 3:
+            nextVC = UIStoryboard(name: "AppearanceSimple", bundle: nil).instantiateViewController(withIdentifier: "AppearanceTabBarVC")
+            present(nextVC, animated: true, completion: nil)
+            return
         default:
             return
         }
