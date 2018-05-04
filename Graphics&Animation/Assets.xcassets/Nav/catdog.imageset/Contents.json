@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "catdog.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "catdog.png",
       "scale" : "2x"
     },
     {

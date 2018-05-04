@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pet Simple Table View Controller-->
+        <!--Pet Table View Controller-->
         <scene sceneID="nSc-bg-KHo">
             <objects>
-                <tableViewController storyboardIdentifier="PetSimpleTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OSe-Ec-ADz" customClass="PetSimpleTableViewController" customModule="Graphics_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PetTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OSe-Ec-ADz" customClass="PetTableViewController" customModule="Graphics_Animation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="zkL-VF-6CY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="1848" y="-344"/>
         </scene>
-        <!--Pet Simple View Controller-->
+        <!--Pet View Controller-->
         <scene sceneID="U62-Xs-y9Z">
             <objects>
-                <viewController storyboardIdentifier="PetSimpleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OZY-aK-cQp" customClass="PetSimpleViewController" customModule="Graphics_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PetViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OZY-aK-cQp" customClass="PetViewController" customModule="Graphics_Animation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qpd-nH-T3V"/>
                         <viewControllerLayoutGuide type="bottom" id="MOE-dU-Hru"/>
@@ -87,7 +87,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="petImageView" destination="8Ap-Dj-71W" id="eSR-BZ-NLW"/>
+                        <outlet property="petImageView" destination="8Ap-Dj-71W" id="CJt-cD-jdC"/>
                         <segue destination="kFC-mV-GlT" kind="show" identifier="ShowAdopt" id="q62-gV-Fhq"/>
                     </connections>
                 </viewController>
@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="3352" y="-344"/>
         </scene>
-        <!--Search Simple Table View Controller-->
+        <!--Search Table View Controller-->
         <scene sceneID="qG6-qc-t06">
             <objects>
-                <tableViewController storyboardIdentifier="SearchSimpleTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WmT-b2-c5e" customClass="SearchSimpleTableViewController" customModule="Graphics_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WmT-b2-c5e" customClass="SearchTableViewController" customModule="Graphics_Animation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hud-WS-0vG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -316,7 +316,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="distanceLabel" destination="ai6-FB-rbR" id="G4j-Le-6iv"/>
+                        <outlet property="distanceLabel" destination="ai6-FB-rbR" id="Wda-UA-UTK"/>
                         <outlet property="distanceSlider" destination="UC8-wB-xI5" id="gdJ-oX-MnN"/>
                         <outlet property="nameTextField" destination="C2W-a4-o87" id="Zmv-Td-mif"/>
                         <outlet property="numberOfPawsLabel" destination="hNq-dc-r8W" id="gbH-Gt-J3V"/>
@@ -359,10 +359,10 @@
             </objects>
             <point key="canvasLocation" x="1848" y="344"/>
         </scene>
-        <!--Settings Simple Table View Controller-->
+        <!--Settings Table View Controller-->
         <scene sceneID="6rs-SA-HSy">
             <objects>
-                <tableViewController storyboardIdentifier="SettingsSimpleTableViewController" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2mi-Dw-e5V" customClass="SettingsSimpleTableViewController" customModule="Graphics_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsTableViewController" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2mi-Dw-e5V" customClass="SettingsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="heB-WH-ZDa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,10 +441,10 @@
             </objects>
             <point key="canvasLocation" x="1040" y="-1059"/>
         </scene>
-        <!--Appearance Tab BarVC-->
+        <!--Appearance Final Tab BarVC-->
         <scene sceneID="cf7-Ya-p9v">
             <objects>
-                <tabBarController storyboardIdentifier="AppearanceTabBarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JFM-st-y2j" customClass="AppearanceTabBarVC" customModule="Graphics_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AppearanceFinalTabBarVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JFM-st-y2j" customClass="AppearanceFinalTabBarVC" customModule="Graphics_Animation" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="A9k-PN-wuC">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
